@@ -36,30 +36,51 @@ Architecture du projet:
 
 superhero-manager/
 │
-├── backend/      → prévu dans le projet mais non utilisé ici
+├── backend/                    
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── .env                  
+│   ├── server.js              
+│   └── src/
+│       ├── config/
+│       │   └── db.js           
+│       ├── models/
+│       │   └── User.js
+│       ├── controllers/
+│       │   └── authController.js
+│       ├── routes/
+│       │   ├── authRoutes.js
+│       │   └── userRoutes.js
+│       └── middlewares/
+│           └── authMiddleware.js
 │
-└── frontend/
+└── frontend/                    
+    ├── package.json
+    ├── package-lock.json
+    ├── vite.config.js
+    ├── index.html
     ├── public/
     │   └── images/
-    │       ├── xs/
-    │       ├── sm/
-    │       ├── md/
-    │       └── lg/
+    │        ├── xs/
+    │        ├── sm/
+    │        ├── md/             
+    │        └── lg/
     │
-    ├── src/
-    │   ├── components/
-    │   ├── context/
-    │   ├── data/
-    │   │   └── SuperHerosComplet.json
-    │   ├── pages/
-    │   │   ├── HeroListePage.tsx
-    │   │   ├── HeroDetails.tsx
-    │   │   ├── LoginPage.tsx
-    │   │   └── RegisterPage.tsx
-    │   └── App.tsx
-    │
-    ├── package.json
-    └── vite.config.ts
+    └── src/
+        ├── App.tsx
+        ├── main.tsx
+        ├── context/
+        │   └── AuthContext.tsx
+        ├── data/
+        │   └── SuperHerosComplet.json
+        ├── components/
+        │   └── Navbar.tsx
+        └── pages/
+            ├── HeroListePage.tsx
+            ├── HeroDetails.tsx
+            ├── LoginPage.tsx
+            └── RegisterPage.tsx
+
 
 Technologies utilisées
 Frontend
