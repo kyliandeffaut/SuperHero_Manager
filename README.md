@@ -33,7 +33,7 @@ Dashboard
 * Raccourcis vers les différentes pages
 
 Architecture du projet:
-
+```
 superhero-manager/
 │
 ├── backend/
@@ -79,7 +79,7 @@ superhero-manager/
             ├── HeroDetails.tsx
             ├── LoginPage.tsx
             └── RegisterPage.tsx
-
+```
 
 Technologies utilisées
 Frontend
