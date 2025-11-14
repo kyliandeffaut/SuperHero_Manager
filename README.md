@@ -36,14 +36,14 @@ Architecture du projet:
 
 superhero-manager/
 │
-├── backend/                    
+├── backend/
 │   ├── package.json
 │   ├── package-lock.json
-│   ├── .env                  
-│   ├── server.js              
+│   ├── .env
+│   ├── server.js
 │   └── src/
 │       ├── config/
-│       │   └── db.js           
+│       │   └── db.js
 │       ├── models/
 │       │   └── User.js
 │       ├── controllers/
@@ -54,18 +54,17 @@ superhero-manager/
 │       └── middlewares/
 │           └── authMiddleware.js
 │
-└── frontend/                    
+└── frontend/
     ├── package.json
     ├── package-lock.json
     ├── vite.config.js
     ├── index.html
     ├── public/
     │   └── images/
-    │        ├── xs/
-    │        ├── sm/
-    │        ├── md/             
-    │        └── lg/
-    │
+    │       ├── xs/
+    │       ├── sm/
+    │       ├── md/
+    │       └── lg/
     └── src/
         ├── App.tsx
         ├── main.tsx
