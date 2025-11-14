@@ -98,14 +98,20 @@ Outils
 Installation et lancement
 
 * Cloner le projet :
+```
 git clone https://github.com/kyliandeffaut/SuperHero_Manager.git
+```
 
 * Installer les dépendances :
+```
 cd superhero-manager/frontend
 npm install
+```
 
 Lancer l’application :
+```
 npm run dev
+```
 
 Le site sera ensuite disponible à l’adresse :
 http://localhost:5173/
