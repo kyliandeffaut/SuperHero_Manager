@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import Hero from "../models/Hero.ts";
+import Hero from "../models/Hero";
 
 export async function listHeroes(req: Request, res: Response) {
   const heroes = await Hero.find();

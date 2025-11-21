@@ -1,11 +1,12 @@
 {
   "name": "superhero-manager-backend",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "dev": "ts-node-esm src/index.ts"
+    "dev": "ts-node src/index.ts"
   },
   "dependencies": {
+    "@types/node": "^24.10.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.19",
     "@types/express": "^4.17.21",
     "@types/jsonwebtoken": "^9.0.5",
     "@types/multer": "^1.4.7",

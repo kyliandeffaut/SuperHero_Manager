@@ -1,21 +1,13 @@
-// backend/src/middleware/authMiddleware.ts
-import type { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
+import type { Request, Response, NextFunction } from "express";
 
-export interface AuthRequest extends Request {
-  user?: { id: string; username: string; role?: string };
-}
-
-export function requireAuth(req: AuthRequest, res: Response, next: NextFunction) {
-  const header = req.headers.authorization;
-  if (!header?.startsWith("Bearer ")) {
-    return res.status(401).json({ message: "Token manquant" });
-  }
+export function requireAuth(req: Request, res: Response, next: NextFunction) {
+  const token = req.headers.authorization?.split(" ")[1];
+  if (!token) return res.status(401).json({ message: "Non autorisé" });
 
   try {
-    const token = header.split(" ")[1];
-    const payload = jwt.verify(token, process.env.JWT_SECRET as string) as any;
-    req.user = { id: payload.id, username: payload.username, role: payload.role };
+    const decoded = jwt.verify(token, process.env.JWT_SECRET!);
+    (req as any).user = decoded;
     next();
   } catch {
     return res.status(401).json({ message: "Token invalide" });

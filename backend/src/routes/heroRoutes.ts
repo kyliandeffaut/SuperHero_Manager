@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { requireAuth } from "../middleware/authMiddleware.ts";
-import { upload } from "../middleware/uploadMiddleware.ts";
-import { listHeroes, getHero, createHero, updateHero, deleteHero } from "../controllers/heroController.ts";
+import { requireAuth } from "../middleware/authMiddleware";
+import { upload } from "../middleware/uploadMiddleware";
+import { listHeroes, getHero, createHero, updateHero, deleteHero } from "../controllers/heroController";
 
 const router = Router();
 
